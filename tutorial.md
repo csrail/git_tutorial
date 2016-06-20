@@ -14,7 +14,7 @@ I hope you have been taking electronic notes, because in this project we are goi
 ##Version Control Systems
 When you are writing essays or hacking away at code, if you get things right the first time - without making errors or the need to make drafts - then you are probably a prodigy. For mere mortals though, you will constantly need to do revisions of your work. 
 
-When you hit *save* in a text-editor, the only thing the text-editor remembers is the final result. ***Save* does not remember all the changes in between**. 
+When you hit *save* in a text-editor, the only thing the text-editor remembers is the final result. **Save does not remember all the changes in between**. 
 
 This is where version control systems come in (hereby known as **VCS**).
 
@@ -32,18 +32,22 @@ In summary, to establish Git as our VCS we have to understand that:
 ##Terminology: where and what are these things?
 ###.git
 * Your `.git` folder is like the **Bag of Holding** and a **Mimic Chest** combined:
-	* `.git` is like a *bag of holding* because it is this tiny, hidden and inconspicuous folder in your root directory
+	* `.git` is like a *bag of holding* because it is able to store a lot of information but is only present as this tiny, hidden and inconspicuous folder in your root directory
 	* `.git` is like a *mimic chest* because it captures and stores all the changes you do within the root directory
+
+![Bag of Holding](http://url/to/img.png)
+![Mimic Chest](http://url/to/img.png)
 
 * FAQs:
 	* What does *root directory* refer to?
-		* // where you want your project to start
-		* // `.git` must exist within the root folder otherwise you run into errors and problems
+		* directory refers to folder and root refers to "beginning"; therefore the root directory is where all your files are being kept. Think of your root directory as the biggest [russian doll](https://youtu.be/-xMYvVr9fd4?t=18s) and all other files inside it are the smaller dolls. If you are inside your root directory, you can see all the files involved in it; if you are outside your root directory, all you see is the root directory's name.
+		* `.git` must exist within the root directory otherwise you will run into many errors and problems associated with pathing.
+		* there also, should only ever be one `.git` folder per project otherwise you will again, run into many errors and problems associated with pathing.
 	* What does *hidden* mean?
-		* //ref to `ls`
-		*// then type `ls -a`
+		* if you type `ls` you will see the usual list of files and folders
+		* then if you type `ls -a` you should see files and folders pop up with a `.` in front of them - these are your hidden (inconspicuous, occult, scheming) files. These hidden items are usually not to be tampered with.
 	* What counts as a *change*?
-		* // includes adding or deleting folders, files and even stuff written INSIDE your files
+		* changes include adding / deleting folders, files and even stuff written INSIDE your files - all of this your `.git` folder, using the programs inside it, picks up.
 
 ###Depots: Local vs Remote
 * A depot is a "place for the storage of large quantities of equipment, food, goods" - or in our case, data. 
@@ -61,18 +65,13 @@ In summary, to establish Git as our VCS we have to understand that:
 			* **in a land far far away** means your device cannot access the contents of a depot unless you have an internet connection
 	* How do I pronounce [depot](https://www.youtube.com/watch?v=_UYiCjmrGC4)? The "t" is silent.
 
-
-
-
-
-
 ###How git commands work:
 * A typical git command is: `git add .` and this is the breakdown:
 	* pretend our `.git` folder is like a dog. And we have named our dog "Steven"
 	* when you type `git add .` it's like saying `Steven fetch ball`
 		* When you say the name `Steven` you are talking to your dog. When you say `git` you're talking to your `.git` folder
 		* When you say `fetch`, you are using a verb to tell your dog to take action. When you say `add` youre are telling your .git folder to take action
-		* When you say `ball` you are telling your dog to fetch the ball. When you say `.` you are telling your .git folder to add all the files and folders within the root directory.
+		* When you say `ball` you are telling your dog to fetch the ball. When you say `.` you are telling your .git folder to add all the files and folders within the current directory
 	* git syntax in short:
 		* `name` | `verb` | `noun`
 		* `program` | `action` | `object` or `destination`
@@ -90,7 +89,12 @@ In summary, to establish Git as our VCS we have to understand that:
 		* read as: |`git` | `push` | `origin master`
 
 
+If you dont set a remote location to point to:
+`git remote` doesn't show anything
 
+once you do set it,
+`git remote` shows `origin`
+`git remote show origin` show a url that you have set
 
 
 ##My version control system works locally, why do I have to put anything online?
@@ -102,3 +106,7 @@ Good question
 	* visually see changes done from one historical entry to another
 	* having a backup
 	* sharing your work for others to see, debug or praise!
+
+
+
+
