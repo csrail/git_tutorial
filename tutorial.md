@@ -107,6 +107,43 @@ Good question
 	* having a backup
 	* sharing your work for others to see, debug or praise!
 
+##What is a README.md file and do I have to make one?
+* It's like a contents page.
 
 
+### Produce instructions for project:
 
+- [ ] **Remote instructions - things done in your web browser only:**
+- Open your web-browser
+- Go to [github website](https://github.com/) and log in to your account.
+- Click on *New Repository*
+- In the text field beneath *Repository name*, type in the name `my_notes` (or whatever you want your folder containing your notes to be called)
+- Add an *optional description* to the repository you are about to create
+- Ensure that the the box *Initialize this repository with a README* is **unticked**
+- Click the *Create New Repository* button
+- [ ] **Local instructions - things done in your command line only:**
+- Note for users that directory == folder
+- Open your command line interface
+- Enter your `the_odin_project` directory
+- Create a new directory named `my_notes` (this should be exactly the same name as the repository)
+- Move any electronic notes you have made into your `my_notes` directory
+- Enter your `my_notes` directory
+- Type `git init`
+- Type `git add .`
+- Type `git commit -m "message"`
+- Type `git remote add origin https://github.com/your_github_username/my_notes_directory_name.git`
+- Type `git push origin master`
+- Enter your github username
+- Enter your password (this is invisible but registers your input)
+- Go to https://github.com/your_username/my_notes and if it left open, refresh it.
+- You should now see your very own notes uploaded onto your github account.
+
+Add encouragement and to cycle through the `git add .`, `git commit -m "message"` and `git push origin master` commands at the end of each study or note taking session.
+Tell them that the "git environment" has been established and to forget about `git init` and `git remote add (url)` until they need to make another project.
+
+### Additional
+- [ ] Produce images:
+- **Github screenshots for following**
+- Bag of Holding
+- Mimic Chest
+- [ ] **Archive guide - to be adjunct material to project**
